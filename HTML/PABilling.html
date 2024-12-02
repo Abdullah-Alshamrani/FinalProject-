@@ -1,0 +1,55 @@
+<html>
+<body style="font-family:arial">
+
+<BR><BR>
+<FORM NAME="Main" ACTION="http://localhost:3000/PABilling" METHOD="post">
+
+     <fieldset style="width: 500px">
+         <legend><b>Billing</b></legend>
+         <br>
+
+          Patient ID:
+         <INPUT TYPE="TEXT" NAME="pid" VALUE="" >
+         <br><br>
+
+          Amount Due:
+         <INPUT TYPE="TEXT" NAME="amount" VALUE="" >
+         <br><br>
+
+         Due Date:
+         <INPUT TYPE="TEXT" NAME="DueDate" VALUE="" >
+         <br><br>
+
+         Payment Status:
+                <SELECT NAME="PaymentStatus">
+                        <OPTION SELECTED>Paid</OPTION>
+                        <OPTION>Pending</OPTION>
+                        <OPTION>Unpaid</OPTION>
+                </SELECT>
+         <br><br>
+
+         Payment Method:
+                <SELECT NAME="PaymentMethod">
+                        <OPTION SELECTED>Credit Card</OPTION>
+                        <OPTION>Cash</OPTION>
+                        <OPTION>Insurance</OPTION>
+                </SELECT>
+         <br><br>
+
+         Paid Date:
+         <INPUT TYPE="TEXT" NAME="PaidDate" VALUE="" >
+         <br><br>
+
+         <div align="center">
+             <INPUT TYPE="submit" VALUE="Add">
+             <INPUT TYPE="submit" VALUE="Delete">
+             <INPUT TYPE="submit" VALUE="Search">
+             <INPUT TYPE="submit" VALUE="Update">
+         </div>
+     </fieldset>
+</FORM>
+
+<a href=PAHome.html>Go Home</a> <!-- Link to go to home page -->
+
+</body>
+</html>
