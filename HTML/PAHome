@@ -1,0 +1,57 @@
+<html>
+<body style="font-family:Inter">
+<BR><BR>
+<style>
+body {
+            background-color: orange; /* Set background color to orange */
+            color: white; /* Set text color to white for contrast */
+            font-family: Arial, sans-serif; /* Set font for the page */
+        }
+
+        /* Style for the header */
+        h1 {
+            text-align: center;
+            color: purple; /* Set header text color to purple */
+        }
+
+        /* Style for a paragraph */
+        p {
+            text-align: center;
+            font-size: 18px;
+            color: purple; /* Set paragraph text color to purple */
+        }
+.Patients div {
+  width:50%;
+  float:left;
+}
+</style>
+<div class="Patients">
+    <div>
+      <h1>Patients Table</h1>
+    </div>
+</div>
+
+
+    <div>
+      <h2>Oslo</h2>
+      <p>Oslo is the capital city of Norway.</p>
+      <p>Oslo has over 600.000 inhabitants.</p>
+    </div>
+
+    <div>
+      <h2>Rome</h2>
+      <p>Rome is the capital city of Italy.</p>
+      <p>Rome has almost 3 million inhabitants.</p>
+    </div>
+
+<BR><BR>
+<FORM NAME="home" ACTION="http://localhost:3000/home" METHOD="post">
+
+<BR><BR><a href=http://localhost:3000/PAAdd>Add Patient</a><BR><BR><BR>
+    <a href=http://localhost:3000/PADelete>Delete Patient</a><BR><BR><BR>
+<a href=http://localhost:3000/PASearch>Search Patient</a><BR><BR><BR>
+<a href=http://localhost:3000/PAUpdate>Update Patient</a>
+
+</FORM>
+</body>
+</html>
