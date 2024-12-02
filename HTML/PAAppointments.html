@@ -1,0 +1,59 @@
+<html>
+<body style="font-family:arial">
+
+<BR><BR>
+<FORM NAME="Main" ACTION="http://localhost:3000/PAAppointments" METHOD="post">
+
+     <fieldset style="width: 500px">
+         <legend><b>Appointments</b></legend>
+         <br>
+
+          Patient ID:
+         <INPUT TYPE="TEXT" NAME="pid" VALUE="" >
+         <br><br>
+
+          Doctor Name:
+         <INPUT TYPE="TEXT" NAME="DName" VALUE="" >
+         <br><br>
+
+         Appointment Date:
+         <INPUT TYPE="TEXT" NAME="date" VALUE="" >
+         <br><br>
+
+         Appointment Time:
+         <INPUT TYPE="TEXT" NAME="time" VALUE="" >
+         <br><br>
+
+         Notes:
+         <INPUT TYPE="TEXT" NAME="notes" VALUE="" >
+         <br><br>
+
+         Appointment Type:
+                <SELECT NAME="AType">
+                        <OPTION SELECTED>Checkup</OPTION>
+                        <OPTION>Follow-up</OPTION>
+                        <OPTION>Consultation</OPTION>
+                </SELECT>
+         <br><br>
+
+         Appointment Status:
+                <SELECT NAME="status">
+                        <OPTION SELECTED>Scheduled</OPTION>
+                        <OPTION>Completed</OPTION>
+                        <OPTION>Cancelled</OPTION>
+                </SELECT>
+         <br><br>
+
+         <div align="center">
+             <INPUT TYPE="submit" VALUE="Add">
+             <INPUT TYPE="submit" VALUE="Delete">
+             <INPUT TYPE="submit" VALUE="Search">
+             <INPUT TYPE="submit" VALUE="Update">
+         </div>
+     </fieldset>
+</FORM>
+
+<a href=PAHome.html>Go Home</a> <!-- Link to go to home page -->
+
+</body>
+</html>
