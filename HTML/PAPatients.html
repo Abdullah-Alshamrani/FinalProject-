@@ -2,64 +2,62 @@
 <body style="font-family:arial">
 
 <BR><BR>
-<FORM NAME="Main" ACTION="http://localhost:3000/main" METHOD="post">
+<FORM NAME="Main" ACTION="http://localhost:3000/PAPatients" METHOD="post">
 
      <fieldset style="width: 500px">
          <legend><b>Patients</b></legend>
          <br>
 
-          Patient ID:
-         <INPUT TYPE="TEXT" NAME="id" VALUE="" >
-         <br><br>
-
-          First Name:
-         <INPUT TYPE="TEXT" NAME="first" VALUE="" >
-         <br><br>
-
-         Last Name:
-         <INPUT TYPE="TEXT" NAME="last" VALUE="" >
+          Name:
+         <INPUT TYPE="TEXT" NAME="name" VALUE="" >
          <br><br>
 
           Date of Birth:
          <INPUT TYPE="TEXT" NAME="dob" VALUE="" >
          <br><br>
 
+         Phone #:
+         <INPUT TYPE="TEXT" NAME="phone" VALUE="" >
+         <br><br>
+
+         Email:
+         <INPUT TYPE="TEXT" NAME="email" VALUE="" >
+         <br><br>
+
+         Insurance Provider:
+         <INPUT TYPE="TEXT" NAME="insurance" VALUE="" >
+         <br><br>
+
+         Address:
+         <INPUT TYPE="TEXT" NAME="address" VALUE="" >
+         <br><br>
+
          Sex:
-                <SELECT NAME="sex">
+                <SELECT NAME="gender">
                         <OPTION SELECTED>Male</OPTION>
                         <OPTION>Female</OPTION>
                         <OPTION>Other</OPTION>
                 </SELECT>
          <br><br>
 
-         Admission Date:
-         <INPUT TYPE="TEXT" NAME="admission" VALUE="" >
-         <br><br>
-
-         Discharge Date:
-         <INPUT TYPE="TEXT" NAME="discharge" VALUE="" >
-         <br><br>
-
-         Physician Name:
-         <INPUT TYPE="TEXT" NAME="Physician" VALUE="" >
+         Emergency Contact Name:
+         <INPUT TYPE="TEXT" NAME="ECName" VALUE="" >
          <br><br>
 
          Emergency Contact Phone #:
-         <INPUT TYPE="TEXT" NAME="phone" VALUE="" >
-         <br><br>
-
-         Insurance:
-         <INPUT TYPE="TEXT" NAME="insurance" VALUE="" >
+         <INPUT TYPE="TEXT" NAME="ECPhone" VALUE="" >
          <br><br>
 
          <div align="center">
-             <INPUT TYPE="submit" VALUE="Add Patient">
-             <INPUT TYPE="submit" VALUE="Delete Patient">
-             <INPUT TYPE="submit" VALUE="Search Patient">
-             <INPUT TYPE="submit" VALUE="Update Patient">
+             <INPUT TYPE="submit" VALUE="Add">
+             <INPUT TYPE="submit" VALUE="Delete">
+             <INPUT TYPE="submit" VALUE="Search">
+             <INPUT TYPE="submit" VALUE="Update">
          </div>
      </fieldset>
 </FORM>
+
+<a href=PAHome.html>Go Home</a> <!-- Link to go to home page -->
 
 </body>
 </html>
