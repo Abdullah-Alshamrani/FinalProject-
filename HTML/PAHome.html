@@ -3,55 +3,98 @@
 <BR><BR>
 <style>
 body {
-            background-color: orange; /* Set background color to orange */
+            background-color: #befdba; /* Set background color to orange */
             color: white; /* Set text color to white for contrast */
             font-family: Arial, sans-serif; /* Set font for the page */
+        }
+        /* Style for buttons */
+        .button {
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 32px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+        /* Style for rounded corners for buttons */
+        #roundCornersTL {
+          border-radius: 50px 15px 5px 30px; /*top left, top right, bottom right, bottom left*/
+          background: #0e9684;
+          padding: 20px;
+          width: 300px;
+          height: 250px;
+        }
+        #roundCornersTR {
+          border-radius: 15px 50px 30px 5px; /*top left, top right, bottom right, bottom left*/
+          background: #8003c2;
+          padding: 20px;
+          width: 300px;
+          height: 250px;
+        }
+        #roundCornersBL {
+          border-radius: 30px 5px 15px 50px; /*top left, top right, bottom right, bottom left*/
+          background: #a2013d;
+          padding: 20px;
+          width: 300px;
+          height: 250px;
+        }
+        #roundCornersBR {
+          border-radius: 5px 30px 50px 15px; /*top left, top right, bottom right, bottom left*/
+          background: #d96202;
+          padding: 20px;
+          width: 300px;
+          height: 250px;
         }
 
         /* Style for the header */
         h1 {
             text-align: center;
-            color: purple; /* Set header text color to purple */
+            color: black; /* Set header text color to purple */
         }
 
         /* Style for a paragraph */
         p {
             text-align: center;
             font-size: 18px;
-            color: purple; /* Set paragraph text color to purple */
+            color: black; /* Set paragraph text color to purple */
         }
 .Patients div {
   width:50%;
-  float:left;
+    float: unset;
 }
 </style>
 <div class="Patients">
     <div>
-      <h1>Patients Table</h1>
+      <h1>Hawk Medical</h1>
     </div>
 </div>
 
+<button class="button TL" id="roundCornersTL" onclick="window.location.href='PAPatients.html'">
+    <h1>Patients</h1>
+    <p>View or edit the hospital's patients</p>
+</button>
 
-    <div>
-      <h2>Oslo</h2>
-      <p>Oslo is the capital city of Norway.</p>
-      <p>Oslo has over 600.000 inhabitants.</p>
-    </div>
+<button class="button TR" id="roundCornersTR" onclick="window.location.href='PAAppointments.html'">
+    <h1>Appointments</h1>
+    <p>Schedule patients for appointments</p>
+</button>
 
-    <div>
-      <h2>Rome</h2>
-      <p>Rome is the capital city of Italy.</p>
-      <p>Rome has almost 3 million inhabitants.</p>
-    </div>
+<BR>
 
-<BR><BR>
-<FORM NAME="home" ACTION="http://localhost:3000/home" METHOD="post">
+<button class="button BL" id="roundCornersBL" onclick="window.location.href='PARecords.html'">
+    <h1>Records</h1>
+    <p>View or edit a patient's medical record</p>
+</button>
 
-<BR><BR><a href=http://localhost:3000/PAAdd>Add Patient</a><BR><BR><BR>
-    <a href=http://localhost:3000/PADelete>Delete Patient</a><BR><BR><BR>
-<a href=http://localhost:3000/PASearch>Search Patient</a><BR><BR><BR>
-<a href=http://localhost:3000/PAUpdate>Update Patient</a>
+<button class="button BR" id="roundCornersBR" onclick="window.location.href='PABilling.html'">
+    <h1>Billing</h1>
+    <p>Add charge to ongoing patient medical bill</p>
+</button>
 
+<FORM NAME="home" ACTION="http://localhost:3000/PAhome" METHOD="post">
 </FORM>
 </body>
 </html>
