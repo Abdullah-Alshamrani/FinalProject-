@@ -2,9 +2,9 @@
 <body style="font-family:arial">
 <style>
 body {
-            background-color: #ff9cbd; /* Set background color to orange */
-            color: #a2013d; /* Set text color to white for contrast */
-            font-family: Arial, sans-serif; /* Set font for the page */
+            background-color: #ff9cbd; /* Set background color */
+            color: #a2013d; /* Set text color */
+            font-family: Arial, sans-serif; /* Set font */
         }
         /* Style for buttons */
         input {
@@ -17,12 +17,13 @@ body {
             border-color: #520021;
             font-weight: bolder;
         }
+        /* horizontal alignment*/
         .horizontal-center {
           margin: 0;
           position: absolute;
           top: 5%;
           -ms-transform: translateX(125%);
-          transform: translateX(125%);
+          transform: translateX(125%); /* how far sideways it should move*/
         }
 
 .Patients div {
@@ -31,14 +32,14 @@ body {
 }
 </style>
 <BR><BR>
-<FORM NAME="Main" ACTION="http://localhost:5000/PARecords" METHOD="post">
+<FORM NAME="Main" ACTION="http://localhost:5000/PARecords" METHOD="post"> <!-- link to SQL statement -->
 <div class="horizontal-center">
-     <fieldset style="width: 335px">
-         <legend><h2>Medical Records</h2></legend>
+     <fieldset style="width: 335px"> <!-- size of box -->
+         <legend><h2>Medical Records</h2></legend> <!-- title of box -->
          <br>
 
           Patient ID:
-         <INPUT TYPE="TEXT" NAME="pid" VALUE="" >
+         <INPUT TYPE="TEXT" NAME="pid" VALUE="" > <!-- text boxes -->
          <br><br>
 
           Diagnosis:
@@ -66,14 +67,14 @@ body {
          <br><br>
 
          <div align="center">
-             <INPUT TYPE="submit" VALUE="Add">
+             <INPUT TYPE="submit" VALUE="Add"> <!-- buttons for standard 4 SQL statements -->
              <INPUT TYPE="submit" VALUE="Delete">
              <INPUT TYPE="submit" VALUE="Search">
              <INPUT TYPE="submit" VALUE="Update">
          </div>
          <BR>
          <div align="center">
-             <INPUT TYPE="reset" VALUE="Reset">
+             <INPUT TYPE="reset" VALUE="Reset"> <!-- button to clear text boxes -->
          </div>
      </fieldset>
 </FORM>
