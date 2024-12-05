@@ -1,11 +1,39 @@
 <html>
 <body style="font-family:arial">
-
+<style>
+body {
+            background-color: #7cffeb; /* Set background color to orange */
+            color: #0b7e6f; /* Set text color to white for contrast */
+            font-family: Arial, sans-serif; /* Set font for the page */
+        }
+        /* Style for buttons */
+        input {
+          color: #0b5048;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 14px;
+          cursor: text;
+            border-color: #003786;
+            font-weight: bolder;
+        }
+        .horizontal-center {
+          margin: 0;
+          position: absolute;
+          top: 5%;
+          -ms-transform: translateX(100%);
+          transform: translateX(100%);
+        }
+.Patients div {
+  width:50%;
+    float: unset;
+}
+</style>
 <BR><BR>
-<FORM NAME="Main" ACTION="http://localhost:3000/PAPatients" METHOD="post">
-
-     <fieldset style="width: 500px">
-         <legend><b>Patients</b></legend>
+<FORM NAME="Main" ACTION="http://localhost:5000/PAPatients" METHOD="post">
+<div class="horizontal-center">
+     <fieldset>
+         <legend><h2>Patients</h2></legend>
          <br>
 
           Name:
@@ -54,10 +82,13 @@
              <INPUT TYPE="submit" VALUE="Search">
              <INPUT TYPE="submit" VALUE="Update">
          </div>
+         <BR>
+         <div align="center">
+             <INPUT TYPE="reset" VALUE="Reset">
+         </div>
      </fieldset>
 </FORM>
-
 <a href=PAHome.html>Go Home</a> <!-- Link to go to home page -->
-
+</div>
 </body>
 </html>
