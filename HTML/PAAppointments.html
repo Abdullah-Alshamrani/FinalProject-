@@ -2,9 +2,9 @@
 <body style="font-family:arial">
 <style>
 body {
-            background-color: #e0aaff; /* Set background color to orange */
-            color: #8003c2; /* Set text color to white for contrast */
-            font-family: Arial, sans-serif; /* Set font for the page */
+            background-color: #e0aaff; /* Set background color */
+            color: #8003c2; /* Set text color to white */
+            font-family: Arial, sans-serif; /* Set font */
         }
         /* Style for buttons */
         input {
@@ -17,12 +17,13 @@ body {
             border-color: #2f045b;
             font-weight: bolder;
         }
+        /*horizontal alignment*/
         .horizontal-center {
             margin: 0;
             position: absolute;
             top: 5%;
             -ms-transform: translateX(125%);
-            transform: translateX(125%);
+            transform: translateX(125%); /*This controls the sideways distance*/
         }
 .Patients div {
   width:50%;
@@ -30,14 +31,14 @@ body {
 }
 </style>
 <BR><BR>
-<FORM NAME="Main" ACTION="http://localhost:5000/PAAppointments" METHOD="post">
+<FORM NAME="Main" ACTION="http://localhost:5000/PAAppointments" METHOD="post"> <!-- Link to SQL statements -->
 <div class="horizontal-center">
-     <fieldset style="width: 340px">
-         <legend><h2>Appointments</h2></legend>
+     <fieldset style="width: 340px"> <!-- size of box -->
+         <legend><h2>Appointments</h2></legend> <!-- Title of page -->
          <br>
 
           Patient ID:
-         <INPUT TYPE="TEXT" NAME="pid" VALUE="" >
+         <INPUT TYPE="TEXT" NAME="pid" VALUE="" > <!-- text boxes -->
          <br><br>
 
           Doctor Name:
@@ -58,7 +59,7 @@ body {
 
          Appointment Type:
                 <SELECT NAME="AType">
-                        <OPTION SELECTED>Checkup</OPTION>
+                        <OPTION SELECTED>Checkup</OPTION> <!-- drop down menu -->
                         <OPTION>Follow-up</OPTION>
                         <OPTION>Consultation</OPTION>
                 </SELECT>
@@ -73,14 +74,14 @@ body {
          <br><br>
 
          <div align="center">
-             <INPUT TYPE="submit" VALUE="Add">
+             <INPUT TYPE="submit" VALUE="Add"> <!-- buttons for standard SQL statements -->
              <INPUT TYPE="submit" VALUE="Delete">
              <INPUT TYPE="submit" VALUE="Search">
              <INPUT TYPE="submit" VALUE="Update">
          </div>
          <BR>
          <div align="center">
-             <INPUT TYPE="reset" VALUE="Reset">
+             <INPUT TYPE="reset" VALUE="Reset"> <!-- clears text boxes -->
          </div>
      </fieldset>
 </FORM>
