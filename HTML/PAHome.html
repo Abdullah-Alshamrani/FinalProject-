@@ -3,13 +3,13 @@
 <BR><BR>
 <style>
     .content {
-    width: 75%; /* Could be anything, but 75% works here. */
+    width: 75%;
     margin: auto; /* This is what center the content div itself. */
  }
 body {
-            background-color: #befdba; /* Set background color to orange */
-            color: white; /* Set text color to white for contrast */
-            font-family: Arial, sans-serif; /* Set font for the page */
+            background-color: #befdba; /* Set background color */
+            color: white; /* Set standard text color to white  */
+            font-family: Arial, sans-serif; /* Set font */
         }
         /* Style for buttons */
         .button {
@@ -24,12 +24,13 @@ body {
           cursor: pointer;
             position: relative;
         }
+        /*horizontal alignment*/
         .horizontal-center {
           margin: 0;
           position: absolute;
           top: 20%;
           -ms-transform: translateX(50%);
-          transform: translateX(50%);
+          transform: translateX(50%); /*This controls the distance across the screen*/
         }
         /* Style for rounded corners for buttons */
         #roundCornersTL {
@@ -61,7 +62,7 @@ body {
           height: 250px;
         }
 
-        /* Style for the header */
+        /* Style for the headers */
         h0 {
             text-align: center;
             color: crimson; /* Set header text color to crimson */
@@ -86,10 +87,10 @@ body {
 </style>
 <div class="Patients" align="center">
     <div>
-      <h0>Hawk Medical</h0>
+      <h0>Hawk Medical</h0> <!-- Title of page -->
     </div>
 </div>
-<div class="horizontal-center">
+<div class="horizontal-center"> <!-- All 4 buttons and their links -->
     <button class="button TL" id="roundCornersTL" onclick="window.location.href='PAPatients.html'">
         <h1>Patients</h1>
         <p>View or edit the hospital's patients</p>
@@ -112,7 +113,7 @@ body {
         <p>Add charge to ongoing patient medical bill</p>
     </button>
 </div>
-<FORM NAME="home" ACTION="http://localhost:5000/PAhome" METHOD="post">
+<FORM NAME="home" ACTION="http://localhost:5000/PAhome" METHOD="post"> <!-- link this page -->
 </FORM>
 </body>
 </html>
