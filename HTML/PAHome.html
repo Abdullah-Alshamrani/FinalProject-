@@ -2,6 +2,10 @@
 <body style="font-family:Inter">
 <BR><BR>
 <style>
+    .content {
+    width: 75%; /* Could be anything, but 75% works here. */
+    margin: auto; /* This is what center the content div itself. */
+ }
 body {
             background-color: #befdba; /* Set background color to orange */
             color: white; /* Set text color to white for contrast */
@@ -15,9 +19,17 @@ body {
           text-align: center;
           text-decoration: none;
           display: inline-block;
-          font-size: 32px;
+          font-size: 19px;
           margin: 4px 2px;
           cursor: pointer;
+            position: relative;
+        }
+        .horizontal-center {
+          margin: 0;
+          position: absolute;
+          top: 20%;
+          -ms-transform: translateX(50%);
+          transform: translateX(50%);
         }
         /* Style for rounded corners for buttons */
         #roundCornersTL {
@@ -50,9 +62,15 @@ body {
         }
 
         /* Style for the header */
+        h0 {
+            text-align: center;
+            color: crimson; /* Set header text color to crimson */
+            font-size: 58px;
+            font-family: Impact;
+        }
         h1 {
             text-align: center;
-            color: black; /* Set header text color to purple */
+            color: black; /* Set header text color to black */
         }
 
         /* Style for a paragraph */
@@ -66,35 +84,35 @@ body {
     float: unset;
 }
 </style>
-<div class="Patients">
+<div class="Patients" align="center">
     <div>
-      <h1>Hawk Medical</h1>
+      <h0>Hawk Medical</h0>
     </div>
 </div>
+<div class="horizontal-center">
+    <button class="button TL" id="roundCornersTL" onclick="window.location.href='PAPatients.html'">
+        <h1>Patients</h1>
+        <p>View or edit the hospital's patients</p>
+    </button>
 
-<button class="button TL" id="roundCornersTL" onclick="window.location.href='PAPatients.html'">
-    <h1>Patients</h1>
-    <p>View or edit the hospital's patients</p>
-</button>
+    <button class="button TR" id="roundCornersTR" onclick="window.location.href='PAAppointments.html'">
+        <h1>Appointments</h1>
+        <p>Schedule patients for appointments</p>
+    </button>
 
-<button class="button TR" id="roundCornersTR" onclick="window.location.href='PAAppointments.html'">
-    <h1>Appointments</h1>
-    <p>Schedule patients for appointments</p>
-</button>
+    <BR>
 
-<BR>
+    <button class="button BL" id="roundCornersBL" onclick="window.location.href='PARecords.html'">
+        <h1>Records</h1>
+        <p>View or edit a patient's medical record</p>
+    </button>
 
-<button class="button BL" id="roundCornersBL" onclick="window.location.href='PARecords.html'">
-    <h1>Records</h1>
-    <p>View or edit a patient's medical record</p>
-</button>
-
-<button class="button BR" id="roundCornersBR" onclick="window.location.href='PABilling.html'">
-    <h1>Billing</h1>
-    <p>Add charge to ongoing patient medical bill</p>
-</button>
-
-<FORM NAME="home" ACTION="http://localhost:3000/PAhome" METHOD="post">
+    <button class="button BR" id="roundCornersBR" onclick="window.location.href='PABilling.html'">
+        <h1>Billing</h1>
+        <p>Add charge to ongoing patient medical bill</p>
+    </button>
+</div>
+<FORM NAME="home" ACTION="http://localhost:5000/PAhome" METHOD="post">
 </FORM>
 </body>
 </html>
