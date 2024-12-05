@@ -1,11 +1,40 @@
 <html>
 <body style="font-family:arial">
+<style>
+body {
+            background-color: #ff9cbd; /* Set background color to orange */
+            color: #a2013d; /* Set text color to white for contrast */
+            font-family: Arial, sans-serif; /* Set font for the page */
+        }
+        /* Style for buttons */
+        input {
+          color: #460a1e;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 14px;
+          cursor: text;
+            border-color: #520021;
+            font-weight: bolder;
+        }
+        .horizontal-center {
+          margin: 0;
+          position: absolute;
+          top: 5%;
+          -ms-transform: translateX(125%);
+          transform: translateX(125%);
+        }
 
+.Patients div {
+  width:50%;
+    float: unset;
+}
+</style>
 <BR><BR>
-<FORM NAME="Main" ACTION="http://localhost:3000/PARecords" METHOD="post">
-
-     <fieldset style="width: 500px">
-         <legend><b>Medical Records</b></legend>
+<FORM NAME="Main" ACTION="http://localhost:5000/PARecords" METHOD="post">
+<div class="horizontal-center">
+     <fieldset style="width: 335px">
+         <legend><h2>Medical Records</h2></legend>
          <br>
 
           Patient ID:
@@ -42,10 +71,14 @@
              <INPUT TYPE="submit" VALUE="Search">
              <INPUT TYPE="submit" VALUE="Update">
          </div>
+         <BR>
+         <div align="center">
+             <INPUT TYPE="reset" VALUE="Reset">
+         </div>
      </fieldset>
 </FORM>
 
 <a href=PAHome.html>Go Home</a> <!-- Link to go to home page -->
-
+</div>
 </body>
 </html>
