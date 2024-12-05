@@ -2,9 +2,9 @@
 <body style="font-family:arial">
 <style>
 body {
-            background-color: #fdd2af; /* Set background color to orange */
-            color: #d96202; /* Set text color to white for contrast */
-            font-family: Arial, sans-serif; /* Set font for the page */
+            background-color: #fdd2af; /* Set background color */
+            color: #d96202; /* Set text color */
+            font-family: Arial, sans-serif; /* Set font */
         }
         /* Style for buttons */
         input {
@@ -17,12 +17,13 @@ body {
             border-color: #331906;
             font-weight: bolder;
         }
+        /* horizontal alignmnet */
         .horizontal-center {
           margin: 0;
           position: absolute;
           top: 5%;
           -ms-transform: translateX(125%);
-          transform: translateX(125%);
+          transform: translateX(125%); /* sideways shift */
         }
 
 .Patients div {
@@ -31,14 +32,14 @@ body {
 }
 </style>
 <BR><BR>
-<FORM NAME="Main" ACTION="http://localhost:5000/PABilling" METHOD="post">
+<FORM NAME="Main" ACTION="http://localhost:5000/PABilling" METHOD="post"> <!-- SQL connection statement -->
 <div class="horizontal-center">
-     <fieldset style="width: 340px">
-         <legend><h2>Billing</h2></legend>
+     <fieldset style="width: 340px"> <!-- size of box -->
+         <legend><h2>Billing</h2></legend> <!-- title of page -->
          <br>
 
           Patient ID:
-         <INPUT TYPE="TEXT" NAME="pid" VALUE="" >
+         <INPUT TYPE="TEXT" NAME="pid" VALUE="" > <!-- text boxes -->
          <br><br>
 
           Amount Due:
@@ -51,7 +52,7 @@ body {
 
          Payment Status:
                 <SELECT NAME="PaymentStatus">
-                        <OPTION SELECTED>Paid</OPTION>
+                        <OPTION SELECTED>Paid</OPTION> <!-- drop down menu -->
                         <OPTION>Pending</OPTION>
                         <OPTION>Unpaid</OPTION>
                 </SELECT>
@@ -70,14 +71,14 @@ body {
          <br><br>
 
          <div align="center">
-             <INPUT TYPE="submit" VALUE="Add">
+             <INPUT TYPE="submit" VALUE="Add"> <!-- standard 4 SQL statement buttons -->
              <INPUT TYPE="submit" VALUE="Delete">
              <INPUT TYPE="submit" VALUE="Search">
              <INPUT TYPE="submit" VALUE="Update">
          </div>
          <BR>
          <div align="center">
-             <INPUT TYPE="reset" VALUE="Reset">
+             <INPUT TYPE="reset" VALUE="Reset"> <!-- clears all text boxes -->
          </div>
      </fieldset>
 </FORM>
