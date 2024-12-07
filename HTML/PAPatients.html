@@ -1,0 +1,131 @@
+<!-- Jack Saunders 
+Database Management Systems
+12/5/2024
+Final Project - Health Database System -->
+
+<html>
+<head>
+    <title>Patient Management</title>
+    <style>
+        /* Page Styles */
+        body {
+            background-color: #7cffeb; /* Light blue background */
+            color: #0b7e6f; /* Text color */
+            font-family: Arial, sans-serif; /* Font style */
+        }
+
+        fieldset {
+            border: 2px solid #0b5048; /* Fieldset border color */
+            padding: 20px; /* Padding inside the fieldset */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        legend {
+            font-size: 18px; /* Legend text size */
+            font-weight: bold; /* Make legend bold */
+        }
+
+        input, select {
+            margin-bottom: 10px; /* Space below inputs */
+            padding: 8px; /* Padding inside inputs */
+            width: 100%; /* Full width inputs */
+            font-size: 14px; /* Input text size */
+            border: 1px solid #0b5048; /* Input border */
+            border-radius: 5px; /* Rounded inputs */
+        }
+
+        input[type="submit"], input[type="reset"] {
+            width: 23%; /* Buttons width */
+            margin-right: 2%; /* Space between buttons */
+            background-color: #0b5048; /* Button background */
+            color: white; /* Button text color */
+            font-weight: bold; /* Bold text on buttons */
+            cursor: pointer; /* Pointer on hover */
+            border: none; /* Remove default border */
+            border-radius: 5px; /* Rounded buttons */
+            padding: 10px; /* Button padding */
+        }
+
+        input[type="reset"] {
+            background-color: #d9534f; /* Red background for reset */
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            opacity: 0.9; /* Slight transparency on hover */
+        }
+
+        .horizontal-center {
+            width: 50%; /* Form width */
+            margin: auto; /* Center the form */
+            margin-top: 50px; /* Space from the top */
+        }
+
+        a {
+            display: block; /* Make links block elements */
+            text-align: center; /* Center-align links */
+            margin-top: 20px; /* Space above links */
+            color: #0b5048; /* Link color */
+            text-decoration: none; /* Remove underline */
+            font-weight: bold; /* Bold links */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
+    </style>
+</head>
+<body>
+    <form id="patient-form" class="horizontal-center">
+        <fieldset>
+            <legend>Manage Patients</legend>
+
+            <!-- Patient Information -->
+            <label for="patientId">Patient ID (for Delete/Update):</label>
+            <input type="text" id="patientId" name="patientId" placeholder="Enter Patient ID">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter full name">
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dateOfBirth">
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phoneNumber" placeholder="Enter phone number">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="emailAddress" placeholder="Enter email">
+
+            <label for="insurance">Insurance Provider:</label>
+            <input type="text" id="insurance" name="insuranceProvider" placeholder="Enter insurance provider">
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Enter address">
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="ecName">Emergency Contact Name:</label>
+            <input type="text" id="ecName" name="emergencyContactName" placeholder="Enter emergency contact name">
+
+            <label for="ecPhone">Emergency Contact Phone:</label>
+            <input type="text" id="ecPhone" name="emergencyContactPhone" placeholder="Enter emergency contact phone">
+
+            <!-- Submit and Reset Buttons -->
+            <div style="display: flex; justify-content: space-between;">
+                <input type="submit" value="Add Patient" formaction="http://localhost:5000/PAPatients/add" formmethod="post">
+                <input type="submit" value="Delete Patient" formaction="http://localhost:5000/PAPatients/delete" formmethod="post">
+                <input type="submit" value="Search Patient" formaction="http://localhost:5000/PAPatients/search" formmethod="post">
+                <input type="submit" value="Update Patient" formaction="http://localhost:5000/PAPatients/update" formmethod="post">
+                <input type="reset" value="Reset">
+            </div>
+        </fieldset>
+    </form>
+
+    <!-- Navigation -->
+    <a href="/PAHome.html">Go Home</a>
+</body>
+</html>

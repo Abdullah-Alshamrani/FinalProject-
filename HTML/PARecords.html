@@ -1,0 +1,115 @@
+<!-- Jack Saunders 
+Database Management Systems
+12/5/2024
+Final Project - Health Database System -->
+
+<html>
+    <head>
+        <title>Medical Records Management</title>
+        <style>
+            /* Page Styles */
+            body {
+                background-color: #ff9cbd; /* Light pink background */
+                color: #a2013d; /* Text color */
+                font-family: Arial, sans-serif; /* Font style */
+            }
+
+            fieldset {
+                border: 2px solid #860120; /* Fieldset border color */
+                padding: 20px; /* Padding inside fieldset */
+                border-radius: 10px; /* Rounded corners */
+            }
+
+            legend {
+                font-size: 18px; /* Legend text size */
+                font-weight: bold; /* Bold legend text */
+            }
+
+            input, select {
+                margin-bottom: 10px; /* Space below inputs */
+                padding: 8px; /* Padding inside inputs */
+                width: 100%; /* Full width inputs */
+                font-size: 14px; /* Input text size */
+                border: 1px solid #860120; /* Input border color */
+                border-radius: 5px; /* Rounded inputs */
+            }
+
+            input[type="submit"], input[type="reset"] {
+                width: 48%; /* Buttons width */
+                margin-right: 2%; /* Space between buttons */
+                background-color: #a2013d; /* Button background */
+                color: white; /* Button text color */
+                font-weight: bold; /* Bold button text */
+                cursor: pointer; /* Pointer cursor on hover */
+                border: none; /* Remove default border */
+                border-radius: 5px; /* Rounded buttons */
+                padding: 10px; /* Button padding */
+            }
+
+            input[type="reset"] {
+                background-color: #d9534f; /* Red background for reset */
+            }
+
+            input[type="submit"]:hover, input[type="reset"]:hover {
+                opacity: 0.9; /* Slight transparency on hover */
+            }
+
+            .horizontal-center {
+                width: 50%; /* Form width */
+                margin: auto; /* Center the form */
+                margin-top: 50px; /* Space from the top */
+            }
+
+            a {
+                display: block; /* Make links block elements */
+                text-align: center; /* Center-align links */
+                margin-top: 20px; /* Space above links */
+                color: #a2013d; /* Link color */
+                text-decoration: none; /* Remove underline */
+                font-weight: bold; /* Bold links */
+            }
+
+            a:hover {
+                text-decoration: underline; /* Add underline on hover */
+            }
+        </style>
+    </head>
+    <body>
+        <form action="http://localhost:5000/PARecords/add" method="post" class="horizontal-center">
+            <fieldset>
+                <legend>Medical Records Management</legend>
+
+                <!-- Medical Records Fields -->
+                <label for="pid">Patient ID:</label>
+                <input type="number" id="pid" name="patientId" placeholder="Enter patient ID" required>
+
+                <label for="diagnosis">Diagnosis:</label>
+                <textarea id="diagnosis" name="diagnosis" placeholder="Enter diagnosis details" required></textarea>
+
+                <label for="appointmentDate">Appointment Date:</label>
+                <input type="date" id="appointmentDate" name="appointmentDate">
+
+                <label for="treatmentPlan">Treatment Plan:</label>
+                <textarea id="treatmentPlan" name="treatmentPlan" placeholder="Enter treatment plan"></textarea>
+
+                <label for="prescriptions">Prescriptions:</label>
+                <textarea id="prescriptions" name="prescriptions" placeholder="Enter prescriptions"></textarea>
+
+                <label for="recordDate">Record Date:</label>
+                <input type="date" id="recordDate" name="recordDate" required>
+
+                <label for="allergies">Allergies:</label>
+                <textarea id="allergies" name="allergies" placeholder="Enter allergies"></textarea>
+
+                <!-- Submit and Reset Buttons -->
+                <div style="display: flex; justify-content: space-between;">
+                    <input type="submit" value="Add Record">
+                    <input type="reset" value="Reset">
+                </div>
+            </fieldset>
+        </form>
+
+        <!-- Navigation -->
+        <a href="/PAHome.html">Go Home</a>
+    </body>
+</html>
